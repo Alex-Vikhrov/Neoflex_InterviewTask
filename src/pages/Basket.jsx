@@ -14,8 +14,7 @@ const Basket = () => {
                 {
                     basketItems === null || basketItems.length === 0 ? <span className='basket__emptyly'>Корзина пуста</span> :
                         <section className='basket__sooping'>
-                            <ContainerBasket producrts={basketItems} className={'basket__h2'} title='корзина' />
-                            {/* <ResultCard /> */}
+                            <ContainerBasket products={basketItems} className={'basket__h2'} title='корзина' />
                         </section>
                 }
             </main>

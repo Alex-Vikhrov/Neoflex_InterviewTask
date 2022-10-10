@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavBar, ContainerHeadPhones, FooterNavBar } from '../components';
 import headPhones from '../constants/catalogHeadPhones';
 import wireless from '../constants/catalogWireless';
+import allHeadPhones from '../constants/allCatalog';
 
 const Shop = () => {
     const language = ['Рус', 'Eng'];
@@ -11,15 +12,20 @@ const Shop = () => {
         setCurrent(current + 1);
     };
 
-    // JSON.parse(sessionStorage.getItem('products')) === null ? 0 : JSON.parse(sessionStorage.getItem('products')).length
-
     const buyHeadPhones = (id) => {
         if (JSON.parse(sessionStorage.getItem('products'))) {
             const curentGuts = JSON.parse(sessionStorage.getItem('products'));
-            curentGuts.push(id);
+            const item = curentGuts.find(elem => elem.id === id);
+            if (item) {
+                item.count++;
+            } else {
+                const item = allHeadPhones.find(elem => elem.id === id);
+                curentGuts.push(item);
+            }
             sessionStorage.setItem('products', JSON.stringify(curentGuts));
         } else {
-            sessionStorage.setItem('products', JSON.stringify([id]));
+            const item = allHeadPhones.find(elem => elem.id === id);
+            sessionStorage.setItem('products', JSON.stringify([item]));
         }
     };
 
@@ -33,9 +39,7 @@ const Shop = () => {
                     headPhones={headPhones}
                     title='наушники'
                     onClickCurrentBuy={onClickCurrentBuy}
-                    onClick={
-                        buyHeadPhones
-                    }
+                    onClick={buyHeadPhones}
                 />
                 <ContainerHeadPhones
                     headPhones={wireless}

@@ -1,21 +1,24 @@
 import React from 'react';
 import { CardBasket, ResultCard } from './UI';
 
-const ContainerBasket = ({ producrts, title, onClick, className }) => {
+const ContainerBasket = ({ products, title, onClick, className }) => {
+    let resultSum = 0;
+    products.map(product => {
+        resultSum += product.count * product.price;
+    });
 
     return (
         <section >
             <h2 className={className || 'h2'}>{title}</h2>
             <div className='headPhonesItems'>
                 {
-                    producrts?.map((item) => <CardBasket
-                        itemId={item}
+                    products?.map((item) => <CardBasket
+                        item={item}
                         onClick={onClick}
-                        key={item} />)
+                        key={item.id} />)
                 }
-                <ResultCard producrts={producrts} />
+                <ResultCard products={products} resultSum={resultSum}/>
             </div>
-
         </section>
     );
 }

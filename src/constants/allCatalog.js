@@ -10,63 +10,72 @@ const allHeadPhones = [{
         img: headPhone_1,
         title: 'Apple BYZ S8521',
         price: 2927,
-        rate: 4.7
+        rate: 4.7,
+        count: 1,
     },
     {
         id: 2,
         img: headPhone_2,
         title: 'Apple EarPods',
         price: 2327,
-        rate: 4.5
+        rate: 4.5,
+        count: 1,
     },
     {
         id: 3,
         img: headPhone_3,
         title: 'Apple EarPods',
         price: 2327,
-        rate: 4.5
+        rate: 4.5,
+        count: 1,
     },
     {
         id: 4,
         img: headPhone_1,
         title: 'Apple BYZ S8521',
         price: 2927,
-        rate: 4.7
+        rate: 4.7,
+        count: 1,
     },
     {
         id: 5,
         img: headPhone_2,
         title: 'Apple EarPods',
         price: 2327,
-        rate: 4.5
+        rate: 4.5,
+        count: 1,
     },
     {
         id: 6,
         img: headPhone_3,
         title: 'Apple EarPods',
         price: 2327,
-        rate: 4.5
+        rate: 4.5,
+        count: 1,
     },
     {
         id: 7,
         img: headPhone_4,
         title: 'Apple AirPods',
         price: 9527,
-        rate: 4.7
+        rate: 4.7,
+        count: 1,
     },
     {
         id: 8,
         img: headPhone_5,
         title: 'GERLAX GH-04',
         price: 6527,
-        rate: 4.7
+        rate: 4.7,
+        count: 1,
     },
     {
         id: 9,
         img: headPhone_6,
         title: 'BOROFONE BO4',
         price: 7527,
-        rate: 4.7
+        rate: 4.7,
+        count: 1,
     },
 ];
 

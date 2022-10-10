@@ -4,37 +4,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import clases from './styles/CardBasket.module.css';
-import allHeadPhones from '../../../constants/allCatalog';
 
-const CardBasket = ({ onClick, itemId }) => {
-    const card = allHeadPhones.find((item) => item.id === itemId);
+const CardBasket = ({ onClick, item }) => {
     const [count, setCount] = useState(1);
-    const [priceCard, setPriceCard] = useState(card.price);
+    const [priceCard, setPriceCard] = useState(item.price);
 
     const onClickPlusProduct = () => {
+        const sesion = JSON.parse(sessionStorage.getItem('products'));
+        const it = sesion.find(elem => elem.id === item.id);
+        it.count++;
         setCount(count + 1);
-    }
+    };
     const onClickMinusProduct = () => {
         if (count === 0) {
             setCount(count = 0);
         }
         setCount(count - 1);
-    }
+    };
     const calcSumPrice = () => {
-        setPriceCard(priceCard + card.price);
-    }
+        setPriceCard(priceCard + item.price);
+    };
     const calcMinusPrice = () => {
-        if(priceCard === 0){
+        if (priceCard === 0) {
             setPriceCard(priceCard = 0)
         }
-        setPriceCard(priceCard - card.price);
-    }
+        setPriceCard(priceCard - item.price);
+    };
 
 
     return (
         <div className={clases.card}>
             <div className={clases.imgContainer}>
-                <img className={clases.imgContainer__basketImg} src={card.img} alt="Apple" />
+                <img className={clases.imgContainer__basketImg} src={item.img} alt="Apple" />
                 <div className={clases.buttonContainer}>
                     <Button className={clases.buttonContainer__btn} onClick={() => {
                         onClickMinusProduct();
@@ -42,7 +43,7 @@ const CardBasket = ({ onClick, itemId }) => {
                     }}>
                         <FontAwesomeIcon className={`${clases.fa} ${clases.fa__faMinus}`} icon={faMinus} />
                     </Button>
-                    <span className={clases.buttonContainer__count}>{count}</span>
+                    <span className={clases.buttonContainer__count}>{item.count /* count */}</span>
                     <Button className={clases.buttonContainer__btn} onClick={() => {
                         onClickPlusProduct();
                         calcSumPrice();
@@ -52,8 +53,8 @@ const CardBasket = ({ onClick, itemId }) => {
                 </div>
             </div>
             <div className={clases.infoProduct}>
-                <h3 className={clases.infoProduct__title}>{card.title}</h3>
-                <span className={clases.infoProduct__price}>{`${card.price}`} &#x20bd;</span>
+                <h3 className={clases.infoProduct__title}>{item.title}</h3>
+                <span className={clases.infoProduct__price}>{`${item.price}`} &#x20bd;</span>
             </div>
             <div className={clases.asideContainer}>
                 <Button className={clases.asideContainer__btn} onClick={onClick}>
