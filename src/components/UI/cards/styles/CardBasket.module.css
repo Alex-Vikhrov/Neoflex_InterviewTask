@@ -1,0 +1,77 @@
+.card {
+  width: 633px;
+  height: 218px;
+  background-color: #fff;
+  margin: 10px 0px 20px 0px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 18px;
+}
+.imgContainer__basketImg {
+  height: 150px;
+}
+
+.buttonContainer {
+  margin-top: 17px;
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonContainer__btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 8px 10px;
+  background-color: #FFCE7F;
+}
+.buttonContainer__btn:hover {
+  transition: 0.3s;
+  background-color: #fda10d;
+}
+.buttonContainer__count {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.fa {
+  color: #fff;
+}
+.fa__faTrashCan {
+  color: #DF6464;
+}
+
+.infoProduct {
+  margin-right: 200px;
+}
+.infoProduct__price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #838383;
+}
+
+.asideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 28px;
+  height: 218px;
+}
+.asideContainer__price {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 144px;
+  color: #1C1C27;
+}/*# sourceMappingURL=CardBasket.module.css.map */

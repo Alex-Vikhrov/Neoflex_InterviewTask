@@ -1,0 +1,102 @@
+@import '_normolise';
+@import '_vars';
+@import '_mixin';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    background-color: $bacground;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    @include flex_colum;
+}
+
+#root {
+    width: 1440px;
+    @include flex_colum;
+}
+
+.app {
+    width: 1135px;
+    @include flex_colum;
+    min-height: 100vh;
+}
+
+.navBarContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.catalogue {
+    margin-top: 28px;
+    width: 1110px;
+}
+
+.h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: $color_title;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: auto;
+    width: 1110px;
+    height: 150px;
+    background-color: $bacground_card;
+    border-radius: 30px 30px 0px 0px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.headPhonesItems {
+    @include flex_space-between;
+    flex-wrap: wrap;
+}
+
+.basket {
+    margin-top: 28px;
+    width: 1110px;
+    &__h2 {
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #1C1C27;
+    }
+    &__emptyly {
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000000;
+    }
+}
+
+@media (max-width: 1440px) {
+    #root {
+        width: 100%;
+    }
+    .app {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+    }
+    .catalogue {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .basket {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    footer {
+        height: 100%;
+        @include flex_center;
+        flex-direction: column;
+    }
+}

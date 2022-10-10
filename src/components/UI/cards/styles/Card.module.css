@@ -1,0 +1,89 @@
+@charset "UTF-8";
+.card {
+  width: 32%;
+  height: 405px;
+  background-color: #fff;
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+}
+
+img {
+  height: 230px;
+}
+
+.containerInfo {
+  margin-top: 50px;
+}
+
+.infoProduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.infoProduct__title {
+  margin-left: 21px;
+}
+.infoProduct__price {
+  margin-right: 22px;
+  color: #FFA542;
+}
+
+.buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.buy__rate {
+  margin-left: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 184px;
+  color: #838383;
+}
+.buy__rate::before {
+  content: "★";
+  margin-right: 10px;
+  font-size: 24px;
+  color: #FFA542;
+}
+.buy__btn {
+  margin-right: 22px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: 600;
+  background-color: #fff;
+  text-transform: capitalize;
+}
+.buy__btn:hover {
+  transition: 0.3s;
+  color: #FFA542;
+}
+
+@media (max-width: 1050px) {
+  .card {
+    width: 45%;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+    margin: 10px 10px 20px 10px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=Card.module.css.map */

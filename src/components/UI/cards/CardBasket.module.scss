@@ -1,0 +1,91 @@
+@import '../../../scss/mixin';
+@import '../../../scss/vars';
+.card {
+    width: 633px;
+    height: 218px;
+    background-color: $bacground_card;
+    margin: 10px 0px 20px 0px;
+    border-radius: 30px;
+    @include flex_space-between;
+}
+
+.imgContainer {
+    @include flex_colum;
+    margin-left: 18px;
+    &__basketImg {
+        height: 150px;
+    }
+}
+
+.buttonContainer {
+    margin-top: 17px;
+    width: 125px;
+    @include flex_space-between;
+    &__btn {
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        font-size: 17px;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 8px 10px;
+        background-color: #FFCE7F;
+        &:hover {
+            transition: 0.3s;
+            background-color: #fda10d;
+        }
+    }
+    &__count {
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+
+.fa {
+    color: $bacground_card;
+    &__faTrashCan {
+        color: #DF6464;
+    }
+}
+
+.infoProduct {
+    margin-right: 200px;
+    &__price {
+        font-size: 15px;
+        font-weight: 600;
+        color: #838383;
+    }
+}
+
+.asideContainer {
+    @include flex_center;
+    flex-direction: column;
+    margin-right: 28px;
+    height: 218px;
+    &__price {
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 144px;
+        color: #1C1C27;
+    }
+}
+
+// @media (max-width:1050px) {
+//     .card {
+//         width: 50%;
+//         flex-wrap: wrap;
+//     }
+// }
+// @media (max-width:800px) {
+//     .card {
+//         width: 100%;
+//         margin: 10px 10px 20px 10px;
+//         flex-wrap: wrap;
+//     }
+// }
+// @media (max-width:500px) {
+//     .card {
+//         width: 100%;
+//         flex-wrap: wrap;
+//     }
+// }

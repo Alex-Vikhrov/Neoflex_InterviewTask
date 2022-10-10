@@ -1,0 +1,13 @@
+.buttonDefault {
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: 600;
+  background-color: #fff;
+  text-transform: capitalize;
+}
+.buttonDefault:hover {
+  transition: 0.2s;
+  color: #FFA542;
+}/*# sourceMappingURL=Button.module.css.map */

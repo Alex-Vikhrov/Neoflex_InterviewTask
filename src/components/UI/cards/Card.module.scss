@@ -1,0 +1,83 @@
+@import '../../../scss/mixin';
+@import '../../../scss/vars';
+.card {
+    width: 32%;
+    height: 405px;
+    background-color: $bacground_card;
+    margin: 10px 0px 20px 0px;
+    @include flex_center;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+img {
+    height: 230px;
+}
+
+.containerInfo {
+    margin-top: 50px;
+}
+
+.infoProduct {
+    @include flex_space-between;
+    width: 100%;
+    &__title {
+        margin-left: 21px;
+    }
+    &__price {
+        margin-right: 22px;
+        color: $color_hover;
+    }
+}
+
+.buy {
+    @include flex_space-between;
+    width: 100%;
+    &__rate {
+        margin-left: 21px;
+        @include flex_center;
+        margin-right: 184px;
+        color: #838383;
+        &::before {
+            content: '★';
+            margin-right: 10px;
+            font-size: 24px;
+            color: $color_hover;
+        }
+    }
+    &__btn {
+        margin-right: 22px;
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        color: #000;
+        font-weight: 600;
+        background-color: $bacground_card;
+        text-transform: capitalize;
+        &:hover {
+            @include hover;
+        }
+    }
+}
+
+@media (max-width:1050px) {
+    .card {
+        width: 45%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:800px) {
+    .card {
+        width: 100%;
+        margin: 10px 10px 20px 10px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:500px) {
+    .card {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
