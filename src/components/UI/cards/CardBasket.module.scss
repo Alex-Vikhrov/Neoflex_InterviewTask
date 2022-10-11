@@ -6,6 +6,7 @@
     background-color: $bacground_card;
     margin: 10px 0px 20px 0px;
     border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     @include flex_space-between;
 }
 
