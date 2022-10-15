@@ -9,7 +9,6 @@ import whatsapp from './img/whatsapp.png';
 
 
 const FooterNavBar = ({ language }) => {
-
     return (
         <footer>
             <Link className={clases.link} to="/">

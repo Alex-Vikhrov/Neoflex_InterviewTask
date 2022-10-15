@@ -32,7 +32,7 @@ const Shop = () => {
     return (
         <div className='app'>
             <header className='navBarContainer'>
-                <NavBar current={current} />
+                <NavBar current={current} linkTitle={'qpick'}/>
             </header>
             <main className='catalogue'>
                 <ContainerHeadPhones

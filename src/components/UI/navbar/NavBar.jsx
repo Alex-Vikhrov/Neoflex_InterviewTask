@@ -5,13 +5,13 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import clases from './styles/NavBar.module.css';
 
-const NavBar = ({ current }) => {
+const NavBar = ({ current, linkTitle }) => {
     return (
         <nav className={clases.navBar}>
             <ul className={clases.navBar__links}>
                 <li>
                     <Link className={clases.a} to="/">
-                        qpick
+                        {linkTitle || 'qpick'}
                     </Link>
                 </li>
                 <li>
